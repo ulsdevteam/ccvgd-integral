@@ -107,3 +107,4 @@ services:
 ```
 docker compose up
 ```
+#Go to the home page via http://localhost:4200

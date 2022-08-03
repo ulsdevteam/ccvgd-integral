@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SshConfigs">
+    <configs>
+      <sshConfig connectionConfig="{&quot;serverAliveInterval&quot;:300}" host="ngrok.luozm.me" id="9777c3c2-3a18-427b-9e40-fc4d30226bb0" keyPath="$PROJECT_DIR$/../ssh/id_ed25519" port="6655" nameFormat="DESCRIPTIVE" username="yifei" />
+    </configs>
+  </component>
+</project>

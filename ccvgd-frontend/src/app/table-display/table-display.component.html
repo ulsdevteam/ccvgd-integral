@@ -1,0 +1,28 @@
+<p>table-display works!</p>
+<mat-expansion-panel
+  [expanded]="true">
+  <mat-expansion-panel-header>
+    <mat-panel-title>
+      {{table.tableNameChinese}}
+    </mat-panel-title>
+  </mat-expansion-panel-header>
+
+  <div  [formGroup]="filterFormGroup">
+    <mat-checkbox
+      *ngFor = "let filter of table.filters"
+      [formControlName]="filter.type"
+      >
+      {{filter.description}}
+    </mat-checkbox>
+  </div>
+
+  <table cdk-table [dataSource]="filteredList">
+    <ng-container *ngFor="let column of table.columnsName" [cdkColumnDef]="column.columnsDef">
+      <th cdk-header-cell *cdkHeaderCellDef>{{ column.columnsHeaderChinese }}</th>
+      <td *cdkCellDef="let row">{{ column.cell(row) }}</td>
+    </ng-container>
+
+    <tr cdk-header-row *cdkHeaderRowDef="table.field"></tr>
+    <tr cdk-row *cdkRowDef="let row; columns: table.field"></tr>
+  </table>
+</mat-expansion-panel>

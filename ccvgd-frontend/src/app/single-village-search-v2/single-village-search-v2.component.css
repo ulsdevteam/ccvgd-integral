@@ -1,0 +1,133 @@
+
+
+.flex-container-single-village {
+    height: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 3%;
+    flex-direction: column;
+    background-image: url("../../assets/CCVG-5.jpeg");
+    background-position: bottom;
+    /*background: url("../../assets/CCVG-6.jpeg") no-repeat bottom fixed;*/
+    /*-webkit-background-size: cover;*/
+    /*-moz-background-size: cover;*/
+    /*-o-background-size: cover;*/
+    /*background-size: cover;*/
+}
+
+h1 {
+    text-align: center;
+    font-size: 3.5em;
+    margin: 40px 0 0 0;
+    padding: 0;
+    color: #000;
+    line-height: normal;
+    font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
+    text-shadow: 0 0 5px white;
+    display: flex;
+    font-size: 2em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+.link-title {
+    font-family: "Times New Roman";
+    font-size: larger;
+    font-weight: bolder;
+    margin-bottom: 5px;
+}
+.links-container {
+    display: flex;
+    font-size: 1.4em;
+    word-wrap: break-word;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+}
+.links {
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+.links > a {
+    margin: 6px 0;
+    color: darkmagenta;
+    font-family: "Times New Roman";
+    font-size: larger;
+    font-weight: 1000;
+}
+.chinese-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2.5em;
+    padding: 3px;
+    line-height: normal;
+    color: black;
+    font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
+    display: grid;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    text-shadow: 0 0 5px white;
+}
+p {
+    text-align: left;
+    font-size: 1.5em;
+    padding: 3px;
+    line-height: normal;
+    color: black;
+    font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
+    display: grid;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+    font-weight: bold;
+    text-shadow: 0 0 5px white;
+}
+
+
+.documentation {
+    justify-content: flex-start;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    image-rendering: high-quality;
+    background: url("../../assets/CCVG-6.jpeg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.content {
+    margin-top: 20px;
+    margin-left: 350px;
+    margin-right: 350px;
+    text-align: center;
+    position: center;
+    height: 90vh;
+    overflow: scroll;
+}
+.footer{
+    height: 36px;
+    width: 100%;
+
+}
+.navbar-brand {
+    font-size: medium;
+}

@@ -1,0 +1,56 @@
+<mat-expansion-panel
+  [expanded]="true">
+  <mat-expansion-panel-header>
+    <mat-panel-title>
+      {{table.tableNameChinese}}
+    </mat-panel-title>
+  </mat-expansion-panel-header>
+
+  <div class="flexContainer">
+    <div class="tableFilter">
+      <mat-tree [dataSource]="dataSource" [treeControl]="treeControl">
+        <mat-tree-node *matTreeNodeDef="let node" matTreeNodeToggle matTreeNodePadding>
+          <button mat-icon-button disabled></button>
+          <mat-checkbox class="checklist-leaf-node"
+                        [checked]="checklistSelection.isSelected(node)"
+                        (change)="todoLeafItemSelectionToggle(node)">
+            {{node.description}}
+          </mat-checkbox>
+        </mat-tree-node>
+
+        <mat-tree-node *matTreeNodeDef="let node; when: hasChild" matTreeNodePadding>
+          <button mat-icon-button matTreeNodeToggle
+                  [attr.aria-label]="'Toggle ' + node.description">
+            <mat-icon class="mat-icon-rtl-mirror">
+              {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}
+            </mat-icon>
+          </button>
+          <mat-checkbox [checked]="descendantsAllSelected(node)"
+                        [indeterminate]="descendantsPartiallySelected(node)"
+                        (change)="todoItemSelectionToggle(node)">
+            {{node.description}}
+          </mat-checkbox>
+        </mat-tree-node>
+      </mat-tree>
+    </div>
+
+    <div class="tableData">
+      <div *ngIf="filteredList?.length">
+        <table cdk-table [dataSource]="filteredList">
+          <ng-container *ngFor="let column of table.columnsName" [cdkColumnDef]="column.columnsDef">
+            <th cdk-header-cell *cdkHeaderCellDef>{{ column.columnsHeaderChinese }}</th>
+            <td *cdkCellDef="let row">{{ column.cell(row) }}</td>
+          </ng-container>
+
+          <tr cdk-header-row *cdkHeaderRowDef="table.field"></tr>
+          <tr cdk-row *cdkRowDef="let row; columns: table.field"></tr>
+        </table>
+      </div>
+
+      <div *ngIf="!filteredList?.length">
+        <p>This table is empty.</p>
+      </div>
+    </div>
+  </div>
+
+</mat-expansion-panel>

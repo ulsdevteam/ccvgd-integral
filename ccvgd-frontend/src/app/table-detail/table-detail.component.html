@@ -1,0 +1,40 @@
+<!--<p>table-detail works!</p>-->
+<div class="flexContainer">
+    <div class="tableFilter">
+        <mat-tree [dataSource]="dataSource" [treeControl]="treeControl">
+            <mat-tree-node *matTreeNodeDef="let node" matTreeNodeToggle matTreeNodePadding>
+                <mat-checkbox class="checklist-leaf-node" [checked]="checklistSelection.isSelected(node)" (change)="todoLeafItemSelectionToggle(node)">
+                    {{ node.description }}
+                </mat-checkbox>
+            </mat-tree-node>
+
+            <mat-tree-node *matTreeNodeDef="let node; when: hasChild" matTreeNodePadding>
+                <button mat-icon-button matTreeNodeToggle [attr.aria-label]="'Toggle ' + node.description">
+          <mat-icon class="mat-icon-rtl-mirror">
+            {{ treeControl.isExpanded(node) ? "expand_more" : "chevron_right" }}
+          </mat-icon>
+        </button>
+                <mat-checkbox [checked]="descendantsAllSelected(node)" [indeterminate]="descendantsPartiallySelected(node)" (change)="todoItemSelectionToggle(node)">
+                    {{ node.description }}
+                </mat-checkbox>
+            </mat-tree-node>
+        </mat-tree>
+        <br /><br /><br />
+
+    </div>
+
+    <div class="tableData">
+        <div *ngIf="filteredList?.length">
+            <mat-table [dataSource]="filteredList">
+                <ng-container *ngFor="let column of table.columnsName" [matColumnDef]="column.columnsDef">
+                    <mat-header-cell *matHeaderCellDef>{{ column.columnsHeaderChinese }}
+                    </mat-header-cell>
+                    <mat-cell *matCellDef="let row">{{ column.cell(row) }}</mat-cell>
+                </ng-container>
+
+                <mat-header-row *matHeaderRowDef="table.field; sticky: true" [ngClass]="'customWidth'"></mat-header-row>
+                <mat-row *matRowDef="let row; columns: table.field" [ngClass]="'customWidth'"></mat-row>
+            </mat-table>
+        </div>
+    </div>
+</div>

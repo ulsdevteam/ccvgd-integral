@@ -1,0 +1,51 @@
+<div class="flexcontainer">
+    <div class="result-container">
+    <div *ngIf="loading" class="shadow-container">
+        <mat-spinner color="warn">
+        </mat-spinner>
+        <span class="loading-text">Loading......</span>
+    </div>
+
+
+    <div *ngFor="let eachCategory of displayResultsData" style="margin-left: 5%; margin-right: 5%">
+
+        <a mat-raised-button [href]="eachCategory.downloadUrl" target="_blank" class="downloadBtn" style="margin-top: 3%;">
+            <mat-icon>cloud_download</mat-icon>&nbsp;&nbsp;{{eachCategory.topicName}}</a>
+        <span class="moreicon" matTooltip="scfnidnviow" matTooltipPosition="right" matTooltipClass="maticon"><mat-icon aria-hidden="false">&nbsp;remove_red_eye</mat-icon></span>
+
+        <div style="margin-top: 20px">
+            <!-- <h2 style="color: white; ">{{eachCategory.topicName}}</h2> -->
+            <mat-chip-list #chipList aria-label="Category selection">
+                <mat-chip *ngFor="let eachCategory of eachCategory.selected_Categories" [selectable]="selectable" [removable]="removable" (removed)="remove(eachCategory)">
+                    {{eachCategory}}
+    <!--                <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>-->
+                </mat-chip>
+
+    <!--            <input #chipsInput placeholder="New category..." [matChipInputFor]="chipList" [matChipInputSeparatorKeyCodes]="separatorKeysCodes" [matChipInputAddOnBlur]="addOnBlur" (matChipInputTokenEnd)="add($event, eachCategory.dataSource)">-->
+            </mat-chip-list>
+            <mat-form-field appearance="standard" class="advanceFilter">
+                <mat-label style="color: darkgrey;">搜索-Search🔍{{eachCategory.topicName}}</mat-label>
+                <input matInput (keyup)="filterDataSource($event,eachCategory.dataSource)" placeholder="Ex. Name" #inputSearchField>
+            </mat-form-field>
+            <table mat-table #dataSource [dataSource]="eachCategory.dataSource" class="mat-elevation-z8">
+                <ng-container *ngFor="let col of eachCategory.displayedColumns" [matColumnDef]="col">
+                    <th mat-header-cell *matHeaderCellDef>{{ col }}</th>
+                    <td mat-cell *matCellDef="let element">{{ element[col] }}</td>
+                </ng-container>
+
+                <tr mat-header-row *matHeaderRowDef="eachCategory.displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: eachCategory.displayedColumns"></tr>
+
+
+                <tr class="mat-row" *matNoDataRow>
+                    <td class="mat-cell" colspan="9999">
+                        😟😟😟😟Sorry, no matching😟😟😟😟
+                    </td>
+                </tr>
+            </table>
+
+            <mat-paginator #mainPaginator [pageSizeOptions]="[15,20,35]" showFirstLastButtons></mat-paginator>
+        </div>
+    </div>
+    </div>
+</div>

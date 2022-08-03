@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="7852e9fd-7143-4e38-b6f8-188c4dc54757" name="Changes" comment="test try">
+      <change beforePath="$PROJECT_DIR$/.idea/CCVG.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CCVG.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/10.1.18 Updated LITES inhosp 2017_Q4.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2018 Q3 Data.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2018 Q3 LF PH Data.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2020 Q4 MICROBIOLOGY - OBFUSCATED KEYS.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CCVGapi.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_func/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_func/advance_search.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_func/en_search.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_func/multiple_csv/1,13.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_func/multiple_csv/1,13_population.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_func/multiple_csv/1,2.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_func/multiple_csv/1,2_population.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_func/multiple_csv/1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_func/multiple_csv/1137_military.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_func/multiple_csv/13.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_func/multiple_csv/13_14.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_func/multiple_csv/13_14_economy.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_func/multiple_csv/13_14_education.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_func/multiple_csv/13_14_military.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_func/multiple_csv/13_14_population.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_func/multiple_csv/13_military.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_func/multiple_csv/13_population.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_func/multiple_csv/1_military.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_func/multiple_csv/1_population.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_func/multiple_csv/2.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_func/multiple_csv/2_population.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_func/single_csv/1,13.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_func/single_csv/1,13_population.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_func/single_csv/1,2.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_func/single_csv/1,2_population.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_func/single_csv/1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_func/single_csv/1137_military.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_func/single_csv/13.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_func/single_csv/13_14.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_func/single_csv/13_14_economy.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_func/single_csv/13_14_education.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_func/single_csv/13_14_military.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_func/single_csv/13_14_population.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_func/single_csv/13_military.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_func/single_csv/13_population.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_func/single_csv/1_military.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_func/single_csv/1_population.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_func/single_csv/2.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_func/single_csv/2_population.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_func/user.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_func/utils.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_func/utils_api.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_func/villageDetails.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_func/village_temp.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/externalFile/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html_view.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/manager.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/model.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nohup.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/return_code.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/status_code.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp_write.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_path.py" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FlaskConsoleOptions" custom-start-script="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))">
+    <envs>
+      <env key="FLASK_APP" value="app" />
+    </envs>
+    <option name="myCustomStartScript" value="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))" />
+    <option name="myEnvs">
+      <map>
+        <entry key="FLASK_APP" value="app" />
+      </map>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="50e22527-3bcc-4f32-a615-5eed335d4d39" />
+        <option name="url" value="https://github.com/Caligula1022/ccvg_local.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedIndex" value="1" />
+  </component>
+  <component name="ProjectId" id="23aLKWXPWyDyL0Fvzb7JhEj8oci" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app_func/single_csv" />
+      <recent name="$PROJECT_DIR$/single_csv" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/externalFile/pythonScript" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.load">
+    <configuration name="duplicate" type="PythonConfigurationType" factoryName="Python">
+      <module name="CCVG" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="$PROJECT_DIR$/venv/bin/python" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/externalFile/pythonScript/incorrect_records" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/externalFile/pythonScript/incorrect_records/checkduplicate.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="load" type="PythonConfigurationType" factoryName="Python">
+      <module name="CCVG" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="$PROJECT_DIR$/venv/bin/python" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/externalFile/pythonScript" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/externalFile/pythonScript/main_load.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="process" type="PythonConfigurationType" factoryName="Python">
+      <module name="CCVG" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="$PROJECT_DIR$/venv/bin/python" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/externalFile/pythonScript" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/externalFile/pythonScript/main_process.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="testProcess" type="PythonConfigurationType" factoryName="Python">
+      <module name="CCVG" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="$PROJECT_DIR$/venv/bin/python" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/externalFile/pythonScript" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/externalFile/pythonScript/testProcess.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.process" />
+      <item itemvalue="Python.load" />
+      <item itemvalue="Python.testProcess" />
+      <item itemvalue="Python.duplicate" />
+    </list>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7852e9fd-7143-4e38-b6f8-188c4dc54757" name="Changes" comment="" />
+      <created>1641967189230</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1641967189230</updated>
+      <workItem from="1641967190685" duration="7019000" />
+      <workItem from="1642355565496" duration="16023000" />
+      <workItem from="1643078028359" duration="3353000" />
+      <workItem from="1643084765005" duration="27741000" />
+      <workItem from="1643557581606" duration="9439000" />
+      <workItem from="1643838974966" duration="1670000" />
+      <workItem from="1643911438170" duration="35139000" />
+      <workItem from="1645044898389" duration="7517000" />
+      <workItem from="1645196905432" duration="634000" />
+      <workItem from="1645381500061" duration="11000" />
+      <workItem from="1645502189594" duration="37877000" />
+      <workItem from="1645587435108" duration="28633000" />
+      <workItem from="1645729463032" duration="15946000" />
+      <workItem from="1647288064827" duration="5707000" />
+      <workItem from="1647353986224" duration="54637000" />
+      <workItem from="1647883320751" duration="11232000" />
+      <workItem from="1648402717005" duration="65146000" />
+      <workItem from="1649044233806" duration="663000" />
+      <workItem from="1649101061769" duration="7712000" />
+      <workItem from="1649363862352" duration="2733000" />
+      <workItem from="1649595930538" duration="22339000" />
+      <workItem from="1650467285748" duration="13441000" />
+      <workItem from="1650634454220" duration="10781000" />
+      <workItem from="1650841392459" duration="597000" />
+      <workItem from="1650944192338" duration="1228000" />
+      <workItem from="1651668087780" duration="3393000" />
+      <workItem from="1651782081296" duration="30158000" />
+      <workItem from="1655086674901" duration="14811000" />
+      <workItem from="1655786645306" duration="18966000" />
+      <workItem from="1656719499332" duration="18000" />
+      <workItem from="1657076412745" duration="5425000" />
+      <workItem from="1657224791060" duration="562000" />
+    </task>
+    <task id="LOCAL-00001" summary="test try">
+      <created>1643562411596</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1643562411596</updated>
+    </task>
+    <task id="LOCAL-00002" summary="test try">
+      <created>1644558751300</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1644558751300</updated>
+    </task>
+    <task id="LOCAL-00003" summary="test try">
+      <created>1644558964150</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1644558964150</updated>
+    </task>
+    <task id="LOCAL-00004" summary="test try">
+      <created>1647408285363</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1647408285363</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="CUSTOM_BOOLEAN_PROPERTIES">
+                <map>
+                  <entry key="Show.Git.Branches" value="true" />
+                </map>
+              </option>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="test try" />
+    <option name="LAST_COMMIT_MESSAGE" value="test try" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/CCVG$testProcess.coverage" NAME="testProcess Coverage Results" MODIFIED="1652941656502" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/externalFile/pythonScript" />
+    <SUITE FILE_PATH="coverage/CCVG$duplicate.coverage" NAME="duplicate Coverage Results" MODIFIED="1645683145818" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/externalFile/pythonScript/incorrect_records" />
+    <SUITE FILE_PATH="coverage/CCVG$process.coverage" NAME="process Coverage Results" MODIFIED="1652900252092" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/externalFile/pythonScript" />
+    <SUITE FILE_PATH="coverage/CCVG$load.coverage" NAME="load Coverage Results" MODIFIED="1652942072728" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/externalFile/pythonScript" />
+  </component>
+</project>

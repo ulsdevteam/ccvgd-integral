@@ -1,0 +1,30 @@
+<mat-expansion-panel
+  [expanded]="true">
+  <mat-expansion-panel-header>
+    <mat-panel-title>
+      {{table.tableNameChinese}}
+    </mat-panel-title>
+  </mat-expansion-panel-header>
+
+<mat-form-field appearance="fill">
+  <mat-label>民族 - Nationality</mat-label>
+  <mat-select [formControl]="ethnicGroups" multiple>
+    <mat-option *ngFor="let ethnicGroup of table.multiselectFilter" [value]="ethnicGroup">{{ethnicGroup}}</mat-option>
+  </mat-select>
+</mat-form-field>
+
+<div *ngIf="filteredList.length>0">
+<table cdk-table [dataSource]="filteredList">
+  <ng-container *ngFor="let column of table.columnsName" [cdkColumnDef]="column.columnsDef">
+    <th cdk-header-cell *cdkHeaderCellDef>{{ column.columnsHeaderChinese }}</th>
+    <td *cdkCellDef="let row">{{ column.cell(row) }}</td>
+  </ng-container>
+
+  <tr cdk-header-row *cdkHeaderRowDef="table.field"></tr>
+  <tr cdk-row *cdkRowDef="let row; columns: table.field"></tr>
+</table>
+</div>
+  <div *ngIf="filteredList.length == 0">
+    <p>This table is empty.</p>
+  </div>
+</mat-expansion-panel>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="c7ef8eee-f3b1-44e8-9bc8-fef2be3b3f7c" name="CCVG">
+        <fileTransfer rootFolder="/home" accessType="SFTP" host="ngrok.luozm.me" port="6655" sshConfigId="9777c3c2-3a18-427b-9e40-fc4d30226bb0" sshConfig="yifei@ngrok.luozm.me:6655 key" keyPair="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

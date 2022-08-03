@@ -66,6 +66,7 @@ CMD python3 app.py runserver -h 0.0.0.0 -p 5050
 cd ccvgd-backend
 docker build -t ccvgd-backend:latest .
 ```
+## Docker compose
 Wait for the image to be generated successfully and then you can deploy it via docker compose.
 It can be deployed by docker compose up or docker compose up -d.
 The docker compose file is:
@@ -107,4 +108,4 @@ services:
 ```
 docker compose up
 ```
-#Go to the home page via http://localhost:4200
+# Go to the home page via http://localhost:4200

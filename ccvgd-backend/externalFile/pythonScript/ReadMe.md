@@ -19,3 +19,4 @@
 ### Note
 * Processed csv files are stored at "Database data" directory.
 * Records can not be loaded into database are stored at "incorrect_records" directory.
+* After running main_process.py, there may be some errors, so you need to fix them and then run main_process.py again.

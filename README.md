@@ -9,10 +9,10 @@ The docker compose file is:
 ```
 version: "2.2"
 
-
 services:
   ccvg:
-    image: ccvgd_backend:latest
+    # image: ccvgd_backend:latest
+    build: ./ccvgd-backend
     ports:
       - "5050:5050"
     depends_on:
@@ -32,13 +32,16 @@ services:
     volumes:
       - ./db:/docker-entrypoint-initdb.d/:ro
   angular:
-    image: ccvgd-frontend:latest
+    # image: ccvgd-frontend:latest
+    build: ./ccvgd-frontend
     ports:
       - "4200:80"
     depends_on:
       - ccvg
       - db
     restart: always
+
+
 
 ```
 ```

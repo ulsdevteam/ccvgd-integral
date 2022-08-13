@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project version="4">
-  <component name="SshConfigs">
-    <configs>
-      <sshConfig host="ngrok.luozm.me" id="cd4fbfbb-c5d6-4817-baec-284b377f51b1" keyPath="$USER_HOME$/.ssh/id_rsa" port="6655" nameFormat="DESCRIPTIVE" username="yifei" />
-    </configs>
-  </component>
-</project>

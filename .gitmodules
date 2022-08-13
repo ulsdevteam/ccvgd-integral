@@ -1,0 +1,6 @@
+[submodule "ccvgd-frontend"]
+	path = ccvgd-frontend
+	url = https://github.com/ulsdevteam/ccvgd-frontend/
+[submodule "ccvgd-backend"]
+	path = ccvgd-backend
+	url = https://github.com/ulsdevteam/ccvgd-backend/

@@ -4,7 +4,7 @@ version: "2.2"
 services:
   ccvg:
 
-    build: ./ccvgd-backend-cvgd-backend-2
+    build: ./ccvgd-backend
     ports:
       - "5050:5050"
     depends_on:
@@ -12,12 +12,14 @@ services:
     restart: always
     links:
       - db 
-    environment:
-      - MYSQL_ROOT_PASSWORD=123456
-      - MYSQL_DATABASE=ccvg
-      - MYSQL_USER=root
-      - MYSQL_HOST=db
-      - MYSQL_PORT=3306
+    env_file:
+      - ./env_file
+    # environment:
+    #   - MYSQL_ROOT_PASSWORD=123456
+    #   - MYSQL_DATABASE=ccvg
+    #   - MYSQL_USER=root
+    #   - MYSQL_HOST=db
+    #   - MYSQL_PORT=3306
     labels:
       - "traefik.http.routers.ccvg.rule=Host(`ccvg.docker.localhost`)"
 

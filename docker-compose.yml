@@ -14,12 +14,6 @@ services:
       - db 
     env_file:
       - ./env_file
-    # environment:
-    #   - MYSQL_ROOT_PASSWORD=123456
-    #   - MYSQL_DATABASE=ccvg
-    #   - MYSQL_USER=root
-    #   - MYSQL_HOST=db
-    #   - MYSQL_PORT=3306
     labels:
       - "traefik.http.routers.ccvg.rule=Host(`ccvg.docker.localhost`)"
 

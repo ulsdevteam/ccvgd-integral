@@ -14,7 +14,7 @@ version: "2.2"
 services:
   ccvg:
 
-    build: ./ccvgd-backend-cvgd-backend-2
+    build: ./ccvgd-backend
     ports:
       - "5050:5050"
     depends_on:
@@ -22,12 +22,8 @@ services:
     restart: always
     links:
       - db 
-    environment:
-      - MYSQL_ROOT_PASSWORD=123456
-      - MYSQL_DATABASE=ccvg
-      - MYSQL_USER=root
-      - MYSQL_HOST=db
-      - MYSQL_PORT=3306
+    env_file:
+      - ./env_file  
     labels:
       - "traefik.http.routers.ccvg.rule=Host(`ccvg.docker.localhost`)"
 
@@ -35,15 +31,14 @@ services:
   db:
     platform: linux/x86_64
     image: mysql:5.7
-    container_name: local1
+    container_name: mysqldb
     ports:
       - "3307:3306"
-    environment:
-      - MYSQL_ROOT_PASSWORD=123456
-      - MYSQL_DATABASE=ccvg
+    env_file:
+      - ./env_file
     volumes:
       - ./db:/docker-entrypoint-initdb.d/:ro
-  
+      
   
   angular:
     build: ./ccvgd-frontend
@@ -52,6 +47,8 @@ services:
     depends_on:
       - ccvg
       - db
+    environment:
+      - API_URL=${API_URL}
     restart: always
     labels:
        - "traefik.http.routers.angular.rule=Host(`angular.docker.localhost`)"
@@ -76,6 +73,9 @@ services:
       - ccvg
       - angular
     restart: always
+  
+
+
 ```
 ```
 docker compose up

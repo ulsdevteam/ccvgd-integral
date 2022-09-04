@@ -1,3 +1,7 @@
+# Web Preview
+
+<img width="1436" alt="image" src="https://user-images.githubusercontent.com/89871210/188335858-0c64166f-798a-405b-98e3-1f0a5506aeb5.png">
+
 # ccvg_integral
 This is the initial deployment test version of the ccvg project
 # Deployment Process

@@ -2,7 +2,8 @@
 This is the initial deployment test version of the ccvg project
 # Deployment Process
 You can only use one command to deploy this project by using "docker compose up" or deploy them seperately.
-
+# Environment variables config
+Please change the environment variables to the ones required by the user according to the format in env_sample file.
 ## Docker compose
 It can be deployed by docker compose up or docker compose up -d.
 The docker compose file is:

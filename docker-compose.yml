@@ -1,4 +1,4 @@
-version: "2.2"
+version: "2.3"
 
 
 services:
@@ -13,9 +13,10 @@ services:
     links:
       - db 
     env_file:
-      - ./env_file  
+      - ./.env
     labels:
-      - "traefik.http.routers.ccvg.rule=Host(`ccvg.docker.localhost`)"
+      - "traefik.enable=true"
+      - "traefik.http.routers.ccvg.rule=Host(`${API_URL}`)"
 
 
   db:
@@ -25,24 +26,35 @@ services:
     ports:
       - "3307:3306"
     env_file:
-      - ./env_file
+      - ./.env
     volumes:
       - ./db:/docker-entrypoint-initdb.d/:ro
-      
-  
+
+
   angular:
-    build: ./ccvgd-frontend
-    ports:
-      - "4200:80"
-    depends_on:
-      - ccvg
-      - db
-    environment:
-      - API_URL=${API_URL}
-    restart: always
-    labels:
-       - "traefik.http.routers.angular.rule=Host(`angular.docker.localhost`)"
-  
+      build:
+        context: ./ccvgd-frontend
+        args:
+        #    It seems that in my testing there is no need to use this args
+  #        - API_ROOT=${API_URL}
+          - PRODUCTION=${PRODUCTION_FLAG}
+      ports:
+        - "4200:80"
+      depends_on:
+        - ccvg
+        - db
+      environment:
+#        - ./.env
+        - API_URL=http://${API_URL}:${API_URL_PORT}/
+      restart: always
+      labels:
+        - "traefik.enable=true"
+        - "traefik.http.routers.angular.rule=Host(`${CCVGD_DOMAIN}`)"
+        - "traefik.http.routers.angular.entrypoints=web,websecure"
+        - "traefik.http.routers.angular.tls=true"
+
+
+
   traefik:
     image: traefik:v2.7
     command:
@@ -53,9 +65,12 @@ services:
       - "80:80"
       - "443:443"
     volumes:
-      - ./traefik/traefik.toml:/etc/traefik/traefik.toml:ro
-      - /var/run/docker.sock:/var/run/docker.sock 
+      - ./traefik/traefik.yaml:/etc/traefik/traefik.yaml:ro
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./traefik/tls.yaml:/etc/conf
+      - ./certs:/etc/ssl/certs
     labels:
+      - "traefik.enable=true"
       - "traefik.http.routers.api.rule=Host(`traefik.docker.localhost`)"
       - "traefik.http.routers.api.service=api@internal"
     depends_on:
@@ -63,6 +78,5 @@ services:
       - ccvg
       - angular
     restart: always
-  
 
 

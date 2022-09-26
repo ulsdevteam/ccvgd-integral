@@ -1,0 +1,23 @@
+version: "1.0"
+services:
+  angular:
+    build:
+      context: ./ccvgd-frontend
+      args:
+#        - API_ROOT=${API_URL}
+        - PRODUCTION=${PRODUCTION_FLAG}
+    ports:
+      - "4200:80"
+#    depends_on:
+#      - ccvg
+#      - db
+    environment:
+#      - ./.env
+      - API_URL=http://${API_URL}:${API_URL_PORT}/
+    restart: always
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.angular.rule=Host(`${CCVGD_DOMAIN}`)"
+      - "traefik.http.routers.angular.entrypoints=web,websecure"
+      - "traefik.http.routers.angular.tls=true"
+

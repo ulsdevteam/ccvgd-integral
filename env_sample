@@ -4,3 +4,7 @@ MYSQL_USER=user
 MYSQL_PASSWORD=123456
 MYSQL_HOST=db
 MYSQL_PORT=3306
+CCVGD_DOMAIN=angular.docker.localhost
+API_URL=ccvg.docker.localhost
+API_URL_PORT=5050
+PRODUCTION_FLAG=false

@@ -7,6 +7,7 @@ services:
     build: ./ccvgd-backend
     ports:
       - "5050:5050"
+      - ""
     depends_on:
       - db
     restart: always
@@ -44,7 +45,7 @@ services:
         - ccvg
         - db
       environment:
-#        - ./.env
+        - ./.env
         - API_URL=http://${API_URL}:${API_URL_PORT}/
       restart: always
       labels:
@@ -61,7 +62,6 @@ services:
       - --providers.docker
       - --api.insecure=true
     ports:
-      - "8080:8080"
       - "80:80"
       - "443:443"
     volumes:

@@ -1,23 +1,82 @@
-version: "1.0"
+version: "2.3"
+
+
 services:
-  angular:
-    build:
-      context: ./ccvgd-frontend
-      args:
-#        - API_ROOT=${API_URL}
-        - PRODUCTION=${PRODUCTION_FLAG}
+  ccvg:
+
+    build: ./ccvgd-backend
     ports:
-      - "4200:80"
-#    depends_on:
-#      - ccvg
-#      - db
-    environment:
-#      - ./.env
-      - API_URL=http://${API_URL}:${API_URL_PORT}/
+      - "5050:5050"
+    depends_on:
+      - db
     restart: always
+    links:
+      - db 
+    env_file:
+      - ./.env
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.angular.rule=Host(`${CCVGD_DOMAIN}`)"
-      - "traefik.http.routers.angular.entrypoints=web,websecure"
-      - "traefik.http.routers.angular.tls=true"
+      - "traefik.http.routers.ccvg.rule=Host(`${API_URL}`)"
+
+
+  db:
+    platform: linux/x86_64
+    image: mysql:5.7
+    container_name: mysqldb
+    ports:
+      - "3307:3306"
+    env_file:
+      - ./.env
+    volumes:
+      - ./db:/docker-entrypoint-initdb.d/:ro
+
+
+  angular:
+      build:
+        context: ./ccvgd-frontend
+        args:
+        #    It seems that in my testing there is no need to use this args
+  #        - API_ROOT=${API_URL}
+          - PRODUCTION=${PRODUCTION_FLAG}
+      ports:
+        - "4200:80"
+      depends_on:
+        - ccvg
+        - db
+      environment:
+#        - ./.env
+        - API_URL=http://${API_URL}:${API_URL_PORT}/
+      restart: always
+      labels:
+        - "traefik.enable=true"
+        - "traefik.http.routers.angular.rule=Host(`${CCVGD_DOMAIN}`)"
+        - "traefik.http.routers.angular.entrypoints=web,websecure"
+        - "traefik.http.routers.angular.tls=true"
+
+
+
+  traefik:
+    image: traefik:v2.7
+    command:
+      - --providers.docker
+      - --api.insecure=true
+    ports:
+      - "8080:8080"
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./traefik/traefik.yaml:/etc/traefik/traefik.yaml:ro
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./traefik/tls.yaml:/etc/conf
+      - ./certs:/etc/ssl/certs
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.api.rule=Host(`traefik.docker.localhost`)"
+      - "traefik.http.routers.api.service=api@internal"
+    depends_on:
+      - db
+      - ccvg
+      - angular
+    restart: always
+
 

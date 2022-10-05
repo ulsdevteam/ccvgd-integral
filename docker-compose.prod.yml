@@ -35,9 +35,6 @@ services:
   angular:
       build:
         context: ./ccvgd-frontend
-        args:
-        #    It seems that in my testing there is no need to use this args
-  #        - API_ROOT=${API_URL}
           - PRODUCTION=${PRODUCTION_FLAG}
       ports:
         - "80"
@@ -67,7 +64,6 @@ services:
       - --providers.docker
       - --api.insecure=true
     ports:
-      - 8080:8080
       - 80:80
       - 443:443
     volumes:

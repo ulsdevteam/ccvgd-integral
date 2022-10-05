@@ -7,12 +7,7 @@ services:
     build:
       context: ./ccvgd-backend
     ports:
-<<<<<<< HEAD
       - "80"
-=======
-      - "5050:5050"
-      - ""
->>>>>>> b34a63f978f05ef5b00e3833d5d6c2f752d70462
     depends_on:
       - db
     restart: always
@@ -40,9 +35,6 @@ services:
   angular:
       build:
         context: ./ccvgd-frontend
-        args:
-        #    It seems that in my testing there is no need to use this args
-  #        - API_ROOT=${API_URL}
           - PRODUCTION=${PRODUCTION_FLAG}
       ports:
         - "80"
@@ -51,12 +43,8 @@ services:
         - db
       environment:
         - ./.env
-<<<<<<< HEAD
         - API_URL=${API_URL}
         - API_URL_PORT=${API_URL_PORT}
-=======
-        - API_URL=http://${API_URL}:${API_URL_PORT}/
->>>>>>> b34a63f978f05ef5b00e3833d5d6c2f752d70462
       restart: always
       labels:
         - "traefik.enable=true"
@@ -76,14 +64,9 @@ services:
       - --providers.docker
       - --api.insecure=true
     ports:
-<<<<<<< HEAD
       - 8080:8080
       - 80:80
       - 443:443
-=======
-      - "80:80"
-      - "443:443"
->>>>>>> b34a63f978f05ef5b00e3833d5d6c2f752d70462
     volumes:
       - ./traefik/traefik.yaml:/etc/traefik/traefik.yaml:ro
       - /var/run/docker.sock:/var/run/docker.sock

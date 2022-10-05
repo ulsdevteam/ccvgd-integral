@@ -35,6 +35,7 @@ services:
   angular:
       build:
         context: ./ccvgd-frontend
+        args:  
           - PRODUCTION=${PRODUCTION_FLAG}
       ports:
         - "80"

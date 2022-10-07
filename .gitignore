@@ -1,3 +1,6 @@
 .env
-
-.DS_Store
+certs/*
+!certs/cert.key
+!certs/cert.crt
+!certs/request.csr
+!certs/v3.ext

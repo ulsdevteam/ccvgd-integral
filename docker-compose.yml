@@ -72,14 +72,20 @@ services:
     command:
       - --providers.docker
       - --api.insecure=true
+      - --entryPoints.web.address=:80
+      - --entryPoints.websecure.address=:443
+      - --providers.docker.exposedByDefault=false
+      - --providers.docker.endpoint=unix:///var/run/docker.sock
+      - --providers.file.filename=/etc/conf/tls.yaml
+      - "--log=true"
+      - "--log.level=DEBUG"
     ports:
       - 8080:8080
       - 80:80
       - 443:443
     volumes:
-      - ./traefik/traefik.yaml:/etc/traefik/traefik.yaml:ro
       - /var/run/docker.sock:/var/run/docker.sock
-      - ./traefik/tls.yaml:/etc/conf
+      - ${TLS_YAML_PATH:-./traefik/tls.yaml}:/etc/conf/tls.yaml
       - ./certs:/etc/ssl/certs
     labels:
       - "traefik.enable=true"

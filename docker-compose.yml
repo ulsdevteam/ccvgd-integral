@@ -17,8 +17,6 @@ services:
       - ./.env
     labels:
       - "traefik.enable=true"
-      - "traefik.http.middlewares.python-redirect-websecure.redirectscheme.scheme=https"
-      - "traefik.http.routers.ccvg.middlewares=python-redirect-websecure"
       - "traefik.http.routers.ccvg.entrypoints=web"
       - "traefik.http.routers.ccvg.rule=Host(`${API_DOMAIN}`)"
       - "traefik.http.routers.python-ssl.entrypoints=websecure"

@@ -17,6 +17,6 @@ API_DOMAIN=ccvg.docker.localhost
 # The URL used by the public site to access the backend
 API_URL=http://ccvg.docker.localhost/
 # Is this to be built as production?
-PRODUCTION_FLAG=false
+PRODUCTION_FLAG=true
 # Certificate configuration path
 TLS_YAML_PATH=

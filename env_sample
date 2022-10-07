@@ -1,11 +1,20 @@
-MYSQL_ROOT_PASSWORD=123456
+# The root user's password for mysql
+MYSQL_ROOT_PASSWORD=54321
+# The mysql database name
 MYSQL_DATABASE=ccvg
+# The web user for the mysql database
 MYSQL_USER=user
+# The web user's mysql password
 MYSQL_PASSWORD=123456
+# The hostname for the mysql database
 MYSQL_HOST=db
+# The port for mysql
 MYSQL_PORT=3306
+# The DNS name for the public site
 CCVGD_DOMAIN=angular.docker.localhost
-API_URL=ccvg.docker.localhost
-API_URL_PORT=80
-API_URL_FRONTEND=http://ccvg.docker.localhost:80/
+# The DNS name for the API backend
+API_DOMAIN=ccvg.docker.localhost
+# The URL used by the public site to access the backend
+API_URL=http://ccvg.docker.localhost/
+# Is this to be built as production?
 PRODUCTION_FLAG=false

@@ -17,7 +17,13 @@ services:
       - ./.env
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.ccvg.rule=Host(`${API_URL}`)"
+      - "traefik.http.middlewares.python-redirect-websecure.redirectscheme.scheme=https"
+      - "traefik.http.routers.ccvg.middlewares=python-redirect-websecure"
+      - "traefik.http.routers.ccvg.entrypoints=web"
+      - "traefik.http.routers.ccvg.rule=Host(`${API_DOMAIN}`)"
+      - "traefik.http.routers.python-ssl.entrypoints=websecure"
+      - "traefik.http.routers.python-ssl.rule=Host(`${API_DOMAIN}`)"
+      - "traefik.http.routers.python-ssl.tls=true"
 
 
   db:
@@ -26,8 +32,11 @@ services:
     container_name: mysqldb
     ports:
       - "3307:3306"
-    env_file:
-      - ./.env
+    environment:
+      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+      - MYSQL_DATABASE=${MYSQL_DATABASE}
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+      - MYSQL_USER=${MYSQL_USER}
     volumes:
       - ./db:/docker-entrypoint-initdb.d/:ro
 
@@ -45,7 +54,6 @@ services:
       environment:
         - ./.env
         - API_URL=${API_URL}
-        - API_URL_PORT=${API_URL_PORT}
       restart: always
       labels:
         - "traefik.enable=true"

@@ -6,8 +6,6 @@ services:
 
     build:
       context: ./ccvgd-backend
-    ports:
-      - "80"
     depends_on:
       - db
     restart: always
@@ -28,8 +26,6 @@ services:
     platform: linux/x86_64
     image: mysql:5.7
     container_name: mysqldb
-    ports:
-      - "3307:3306"
     environment:
       - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
       - MYSQL_DATABASE=${MYSQL_DATABASE}
@@ -44,8 +40,6 @@ services:
         context: ./ccvgd-frontend
         args:  
           - PRODUCTION=${PRODUCTION_FLAG}
-      ports:
-        - "80"
       depends_on:
         - ccvg
         - db

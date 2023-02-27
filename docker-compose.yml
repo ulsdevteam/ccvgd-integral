@@ -20,6 +20,8 @@ services:
       - "traefik.http.routers.python-ssl.entrypoints=websecure"
       - "traefik.http.routers.python-ssl.rule=Host(`${API_DOMAIN}`)"
       - "traefik.http.routers.python-ssl.tls=true"
+      - "traefik.http.middlewares.cors.headers.customResponseHeaders.Access-Control-Allow-Origin=*"
+      - "traefik.http.routers.python-ssl.middlewares=cors"
 
 
   db:

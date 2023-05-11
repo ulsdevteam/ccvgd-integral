@@ -8,7 +8,7 @@ services:
       context: ./ccvgd-backend
     depends_on:
       - db
-    restart: always
+    restart: "always"
     links:
       - db
     env_file:
@@ -35,6 +35,7 @@ services:
       - MYSQL_USER=${MYSQL_USER}
     volumes:
       - ./db:/docker-entrypoint-initdb.d/:ro
+    restart: "always"
 
 
   angular:
@@ -48,7 +49,7 @@ services:
       environment:
         - ./.env
         - API_URL=${API_URL}
-      restart: always
+      restart: "always"
       labels:
         - "traefik.enable=true"
         - "traefik.http.middlewares.angular-redirect-websecure.redirectscheme.scheme=https"
@@ -89,6 +90,6 @@ services:
       - db
       - ccvg
       - angular
-    restart: always
+    restart: "always"
 
 

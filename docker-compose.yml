@@ -43,6 +43,7 @@ services:
         context: ./ccvgd-frontend
         args:  
           - PRODUCTION=${PRODUCTION_FLAG}
+          - API_URL=${API_URL}
       depends_on:
         - ccvg
         - db
